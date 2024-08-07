@@ -24,4 +24,11 @@ public class StringCalculaterTest {
         StringCalculater calculater = new StringCalculater();
         assertEquals(3, calculater.add("1,2"));
     }
+
+    // "1,2,3"
+    @Test
+    public void unknownAmountOfNumber() {
+        StringCalculater calculater = new StringCalculater();
+        assertEquals(10, calculater.add("1,2,3,4"));
+    }
 }

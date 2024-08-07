@@ -4,6 +4,11 @@ public class StringCalculater {
         if (numbers.length() == 1) return Integer.parseInt(numbers);
         String[] splittedArr = numbers.split(",");
 
-        return Integer.parseInt(splittedArr[0]) + Integer.parseInt(splittedArr[1]);
+        int addition = 0;
+        for (int i = 0; i < splittedArr.length; i++) {
+            addition += Integer.parseInt(splittedArr[i]);
+        }
+
+        return addition;
     }
 }
