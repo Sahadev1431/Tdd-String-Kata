@@ -2,7 +2,7 @@ public class StringCalculater {
     int add(String numbers) {
         if (numbers.isEmpty()) return 0;
         if (numbers.length() == 1) return Integer.parseInt(numbers);
-        String[] splittedArr = numbers.split(",");
+        String[] splittedArr = numbers.split(",|\n");
 
         int addition = 0;
         for (int i = 0; i < splittedArr.length; i++) {
