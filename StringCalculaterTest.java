@@ -37,4 +37,11 @@ public class StringCalculaterTest {
         StringCalculater calculater = new StringCalculater();
         assertEquals(6, calculater.add("1\n2,3"));
     }
+
+    // "//;\n1;2"
+    @Test
+    public void beginingDelimiterSlash() {
+        StringCalculater calculater = new StringCalculater();
+        assertEquals(3,calculater.add("//;\n1;2"));
+    }
 }
