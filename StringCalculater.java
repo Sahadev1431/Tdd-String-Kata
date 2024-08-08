@@ -17,6 +17,7 @@ public class StringCalculater {
         int addition = 0;
         for (int i = start; i < splittedArr.length; i++) {
             if (!splittedArr[i].isEmpty()) {
+                if (Integer.parseInt(splittedArr[i]) < 0) throw new IllegalArgumentException("Negetives not allowed "+splittedArr[i]);
                 addition += Integer.parseInt(splittedArr[i]);
             }
         }

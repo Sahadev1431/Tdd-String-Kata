@@ -1,4 +1,5 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -43,5 +44,17 @@ public class StringCalculaterTest {
     public void beginingDelimiterSlash() {
         StringCalculater calculater = new StringCalculater();
         assertEquals(3,calculater.add("//;\n1;2"));
+    }
+    
+    @Test
+    public void addWithNegetiveNumbers() {
+        StringCalculater calculater = new StringCalculater();
+        boolean thrown = false;
+        try {
+            calculater.add("//;\n1;2,-3");
+        } catch (Exception e) {
+            thrown = true;
+        }
+        assertTrue(thrown);
     }
 }
